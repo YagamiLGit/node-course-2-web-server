@@ -55,6 +55,11 @@ app.get('/bad', (req, res) => {
     errorMessage: 'Unable to connect to server'
   });
 });
+app.get('/projects', (req,res) => {
+  res.render('projects.hbs',{
+    pageTitle: 'Project Page'
+  });
+});
 
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
